@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div id="map"></div> 
+   <script>
+      var redIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+      var greenIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+   var map=L.map("map", {
+      minZoom:0,
+   }).setView([5.28857,10.29001],13)
+   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    minZoom:1,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+L.marker([5.30772,10.3175]) .addTo(map) .bindPopup("<b>gendarmerie</b>").openPopup();
+L.marker([5.30616,10.3159]) .addTo(map) .bindPopup("<b>mairie de Batié</b>").openPopup();
+L.marker([5.30791,10.3142]) .addTo(map) .bindPopup("<b>LyTec de Batié</b>").openPopup();
+L.marker([5.30735,10.314], {icon: redIcon}) .addTo(map) .bindPopup("<b>Hôpital EEC BAtié</b>").openPopup();
+L.marker([5.28292,10.259]) .addTo(map) .bindPopup("<b>EP Maternelle de BATI-COL</b>").openPopup();
+L.marker([5.28478,10.26], {icon: redIcon}) .addTo(map) .bindPopup("<b>Hôpital Int de Bametchoue fodome</b>").openPopup();
+L.marker([5.30216,10.2642]) .addTo(map) .bindPopup("<b>EC ST PAUL DE LUC</b>").openPopup();
+L.marker([5.30982,10.2623]) .addTo(map) .bindPopup("<b>Centre d'excellence scolaire</b>").openPopup();
+L.marker([5.31639,10.2587]) .addTo(map) .bindPopup("<b>École public de Balig</b>").openPopup();
+L.marker([5.32851,10.2785]) .addTo(map) .bindPopup("<b>École public de Balig</b>").openPopup();
+L.marker([5.33748,10.2879], {icon: redIcon}) .addTo(map) .bindPopup("<b>Hôpital de BALAGOU 1</b>").openPopup();
+L.marker([5.3125,10.2983]) .addTo(map) .bindPopup("<b>École public</b>").openPopup();
+L.marker([5.30637,10.2917]) .addTo(map) .bindPopup("<b>école privé de BALAGOU1</b>").openPopup();
+L.marker([5.29903,10.2899]) .addTo(map) .bindPopup("<b>École Public Bilingue</b>").openPopup();
+L.marker([5.29904,10.2903], {icon: redIcon}) .addTo(map) .bindPopup("<b>Hopital intégrer Balagou 1</b>").openPopup();
+L.marker([5.29305,10.294]) .addTo(map) .bindPopup("<b>École Public chefferie</b>").openPopup();
+L.marker([5.29266,10.2956]) .addTo(map) .bindPopup("<b>chefferie Batié</b>").openPopup();
+L.marker([5.26171,10.3094]) .addTo(map) .bindPopup("<b>École Publique</b>").openPopup();
+L.marker([5.26479,10.3148], {icon: redIcon}) .addTo(map) .bindPopup("<b>Hôpital de BAMETCHOU TCHA</b>").openPopup();
+L.marker([5.26783,10.3196]) .addTo(map) .bindPopup("<b>Centre d'excellence scolaire</b>").openPopup();
+L.marker([5.30004,10.3053]) .addTo(map) .bindPopup("<b>Lycée de BAHIALA</b>").openPopup();
+L.marker([5.30824,10.3072]) .addTo(map) .bindPopup("<b>École Catho Balagou 1</b>").openPopup();
+L.marker([5.30497,10.3085]) .addTo(map) .bindPopup("<b>Sous_préfecture de Batié</b>").openPopup();
+L.marker([5.29946,10.3145]) .addTo(map) .bindPopup("<b>École Public Bahiala</b>").openPopup();
+L.marker([5.31092,10.3247]) .addTo(map) .bindPopup("<b>École Catho Bafemgoum 2</b>").openPopup();
+L.marker([5.31623,10.325], {icon: redIcon}) .addTo(map) .bindPopup("<b>Hôpital de Bafemgoum 2</b>").openPopup();
+L.marker([5.31855,10.324]) .addTo(map) .bindPopup("<b>École public</b>").openPopup();
+L.marker([5.33312,10.3203]) .addTo(map) .bindPopup("<b>École public Bafemgoum 2</b>").openPopup();
+L.marker([5.31455,10.3246], {icon: greenIcon}) .addTo(map) .bindPopup("<b>Espace vert</b>").openPopup();
+L.marker([5.33385,10.3202]) .addTo(map) .bindPopup("<b>LYBI de bafemgoum 1</b>").openPopup();
+   </script>
+</body>
+</html>
